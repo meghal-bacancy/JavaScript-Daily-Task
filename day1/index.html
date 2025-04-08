@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link href="style.css" rel="stylesheet" />
+  <title>To-Do</title>
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <h2>To-Do</h2>
+    </nav>
+  </header>
+
+  <main class="main-content">
+
+    <section class="todo-section">
+      <h2>To-Do</h2>
+      <div class="todo-input-container">
+        <input type="text" id="taskInput" placeholder="Enter a new task..." />
+        <button class ="button" id="addTaskBtn" onclick="addNotes()">Add</button>
+      </div>
+    </section>
+
+    <div class="card-container" id="notesContainer">
+
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 MySite. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
