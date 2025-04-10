@@ -1,21 +1,12 @@
 
 function getPositiveNumbers(arr) {
-    let positiveNumbersArr = [];
-    arr.forEach(i => {
-        if (i > 0) {
-            positiveNumbersArr.push(i);
-        }
-    });
+    let positiveNumbersArr = arr.filter(n => n > 0);
     return positiveNumbersArr;
 }
 
 function getSquaredEvens(arr) {
-    let evenSquaredNumbers = []
-    arr.forEach(i => {
-        if (i % 2 == 0) {
-            evenSquaredNumbers.push(i * i);
-        }
-    });
+    let even = arr.filter(n => n % 2 === 0);
+    let evenSquaredNumbers = even.map(n => n * n);
     return evenSquaredNumbers;
 }
 
@@ -70,11 +61,14 @@ function displayNotes(notesArray) {
     });
 }
 
-
 function addNotes(){
     const textContainer = document.getElementById("taskInput");
     
-    notes.push(textContainer.value.trim());
+    const text = textContainer.value.trim();
+    if (text)
+    {
+        notes.push(text);
+    }
     textContainer.value = "";
     displayNotes(notes);
 }
